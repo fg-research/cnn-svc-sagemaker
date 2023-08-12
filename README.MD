@@ -3,6 +3,7 @@ The [Time Series Classification (CNN-SVM) Algorithm from AWS Marketplace](placeh
 performs time series classification with an unsupervised convolutional neural network followed by a support vector classifier. 
 It implements both training and inference from CSV data and supports both CPU and GPU instances.
 The training and inference Docker images were built by extending the PyTorch 2.0 Python 3.10 SageMaker containers.
+The Docker images contain software licensed under the Apache License 2.0, see the attached LICENSE and NOTICE.
 
 ## Model Description
 ### Model Architecture
