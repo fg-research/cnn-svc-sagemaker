@@ -93,4 +93,4 @@ See `notebook.ipynb` for an example of how to deploy the model to an endpoint, i
 See the sample output file `real_time_predictions.csv` in the `data/inference/output/real-time` folder.
 
 ## References
-- J.Y. Franceschi, A. Dieuleveut and M. Jaggi, "Unsupervised scalable representation learning for multivariate time series," in *Advances in neural information processing systems*, vol. 32, 2019, [doi.org/10.48550/arXiv.1901.10738](https://doi.org/10.48550/arXiv.1901.10738).
+- J. Y. Franceschi, A. Dieuleveut and M. Jaggi, "Unsupervised scalable representation learning for multivariate time series," in *Advances in neural information processing systems*, vol. 32, 2019, [doi.org/10.48550/arXiv.1901.10738](https://doi.org/10.48550/arXiv.1901.10738).
