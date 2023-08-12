@@ -11,12 +11,12 @@ and a support vector classifier which takes as input the extracted features and 
 
 The encoder includes a stack of exponentially dilated causal convolutional blocks, followed by an adaptive max pooling layer and a linear output layer.
 Each block consists of two causal convolutional layers with the same dilation rate, each followed by weight normalization and Leaky ReLU activation.
-A residual connection is applied between the input and the output of each block, where the input is transformed by a convolutional layer with a kernel size of 1 when its length does not match the one of the output.
+A residual connection is applied between the input and the output of each block, where the input is transformed by an additional convolutional layer with a kernel size of 1 when its length does not match the one of the output.
 
 The encoder parameters are learned in an unsupervised manner by minimizing the triplet loss.
 The training procedure makes the extracted features of a given sequence (anchor) 
 as close as possible to the extracted features of this same sequence's subsequences (positive samples) 
-and as distant as possible from the extracted features of other random subsequences (negative samples).
+and as distant as possible from the extracted features of other subsequences (negative samples).
 
 The number of features extracted by the encoder is determined by the number of hidden units of the linear output layer.
 These features are used together with the class labels for training the support vector classifier. 
