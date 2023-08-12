@@ -1,5 +1,5 @@
 # CNN-SVM SageMaker Algorithm
-The [Time Series Classification (CNN-SVM) Algorithm from AWS Marketplace](https://aws.amazon.com/marketplace/pp/prodview-vzxmyw25oqtx6) 
+The [Time Series Classification (CNN-SVM) Algorithm from AWS Marketplace](placeholder) 
 performs time series classification with an unsupervised convolutional neural network followed by a support vector classifier. 
 It implements both training and inference from CSV data and supports both CPU and GPU instances.
 The training and inference Docker images were built by extending the PyTorch 2.0 Python 3.10 SageMaker containers.
