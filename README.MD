@@ -45,10 +45,6 @@ The time series are scaled internally by the algorithm, there is no need to scal
 See the sample input files `train.csv` and `valid.csv` in the `data/training/` folder.
 See `notebook.ipynb` for an example of how to launch a training job.
 
-#### Distributed Training
-The algorithm supports multi-GPU training on a single instance, which is implemented through [torch.nn.DataParallel](https://pytorch.org/docs/stable/generated/torch.nn.DataParallel.html).
-The algorithm does not support multi-node (or distributed) training across multiple instances. 
-
 #### Hyperparameters
 The training algorithm takes as input the following hyperparameters:
 - `penalty`: `float`. The regularization parameter of the support vector classifier	(default = 0).
