@@ -26,7 +26,7 @@ All (sub)sequences are sampled randomly during each training iteration.
 
 <img src=https://fg-research-assets.s3.eu-west-1.amazonaws.com/cnn-encoder-sampling-diagram.png style="width:40%;margin-top:30px;margin-bottom:20px"/>
 
-*Time-based sampling procedure (source: [doi.org/10.48550/arXiv.1901.10738](https://doi.org/10.48550/arXiv.1901.10738))*
+*Time-based sampling (source: [doi.org/10.48550/arXiv.1901.10738](https://doi.org/10.48550/arXiv.1901.10738))*
 
 The number of features extracted by the encoder is determined by the number of hidden units of the linear output layer.
 These features are used together with the class labels for training the support vector classifier. 
