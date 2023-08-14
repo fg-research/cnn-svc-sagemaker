@@ -1,6 +1,7 @@
-# CNN-SVM SageMaker Algorithm
-The [Time Series Classification (CNN-SVM) Algorithm from AWS Marketplace](https://aws.amazon.com/marketplace/pp/prodview-mo7cf4nrgrbxk) 
-performs time series classification with an unsupervised convolutional neural network followed by a support vector classifier. 
+# CNN-SVC SageMaker Algorithm
+The [Time Series Classification (CNN-SVC) Algorithm from AWS Marketplace](https://aws.amazon.com/marketplace/pp/prodview-mo7cf4nrgrbxk) 
+performs time series classification with an unsupervised convolutional neural network (CNN) trained using contrastive learning 
+followed by a support vector classifier (SVC). 
 It implements both training and inference from CSV data and supports both CPU and GPU instances.
 The training and inference Docker images were built by extending the PyTorch 2.0 Python 3.10 SageMaker containers.
 The Docker images include modifications of software licensed under the Apache License 2.0, see the [LICENSE](https://github.com/fg-research/cnn-svc-sagemaker/blob/master/LICENSE) and [NOTICE](https://github.com/fg-research/cnn-svc-sagemaker/blob/master/NOTICE).
@@ -19,14 +20,14 @@ A residual connection is applied between the input and the output of each block,
 *Encoder architecture (source: [doi.org/10.48550/arXiv.1901.10738](https://doi.org/10.48550/arXiv.1901.10738))*
 
 The encoder parameters are learned in an unsupervised manner by minimizing the triplet loss.
-The contrastive training procedure makes the extracted features of a given sequence (anchor or reference) 
+The contrastive learning procedure makes the extracted features of a given sequence (anchor or reference) 
 as close as possible to the extracted features of this same sequence's subsequences (positive samples) 
 and as distant as possible from the extracted features of other sequences (negative samples).
 All (sub)sequences are sampled randomly during each training iteration.
 
 <img src=https://fg-research-assets.s3.eu-west-1.amazonaws.com/cnn-encoder-sampling-diagram.png style="width:40%;margin-top:30px;margin-bottom:20px"/>
 
-*Contrastive training (source: [doi.org/10.48550/arXiv.1901.10738](https://doi.org/10.48550/arXiv.1901.10738))*
+*Contrastive learning (source: [doi.org/10.48550/arXiv.1901.10738](https://doi.org/10.48550/arXiv.1901.10738))*
 
 The number of features extracted by the encoder is determined by the number of hidden units of the linear output layer.
 These features are used together with the class labels for training the support vector classifier. 
