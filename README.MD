@@ -1,7 +1,7 @@
 # CNN-SVC SageMaker Algorithm
 The [Time Series Classification (CNN-SVC) Algorithm from AWS Marketplace](https://aws.amazon.com/marketplace/pp/prodview-mo7cf4nrgrbxk) 
-performs time series classification with an unsupervised convolutional neural network (CNN) trained using contrastive learning 
-followed by a support vector classifier (SVC). 
+performs time series classification with an unsupervised convolutional neural network trained using contrastive learning 
+followed by a support vector classifier. 
 It implements both training and inference from CSV data and supports both CPU and GPU instances.
 The training and inference Docker images were built by extending the PyTorch 2.0 Python 3.10 SageMaker containers.
 The Docker images include modifications of software licensed under the Apache License 2.0, see the [LICENSE](https://github.com/fg-research/cnn-svc-sagemaker/blob/master/LICENSE) and [NOTICE](https://github.com/fg-research/cnn-svc-sagemaker/blob/master/NOTICE).
