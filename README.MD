@@ -25,7 +25,7 @@ as close as possible to the extracted features of this same sequence's subsequen
 and as distant as possible from the extracted features of other sequences (negative samples).
 All (sub)sequences are sampled randomly during each training iteration.
 
-<img src=https://fg-research-assets.s3.eu-west-1.amazonaws.com/cnn-encoder-sampling-diagram.png style="width:40%;margin-top:30px;margin-bottom:20px"/>
+<img src=https://fg-research-assets.s3.eu-west-1.amazonaws.com/cnn-encoder-sampling-diagram.png style="width:50%;margin-top:30px;margin-bottom:20px"/>
 
 *Contrastive learning (source: [doi.org/10.48550/arXiv.1901.10738](https://doi.org/10.48550/arXiv.1901.10738))*
 
