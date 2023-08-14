@@ -1,5 +1,5 @@
 # CNN-SVM SageMaker Algorithm
-The [Time Series Classification (CNN-SVM) Algorithm from AWS Marketplace](placeholder) 
+The [Time Series Classification (CNN-SVM) Algorithm from AWS Marketplace](https://aws.amazon.com/marketplace/pp/prodview-mo7cf4nrgrbxk) 
 performs time series classification with an unsupervised convolutional neural network followed by a support vector classifier. 
 It implements both training and inference from CSV data and supports both CPU and GPU instances.
 The training and inference Docker images were built by extending the PyTorch 2.0 Python 3.10 SageMaker containers.
@@ -14,17 +14,22 @@ The encoder includes a stack of exponentially dilated causal convolutional block
 Each block consists of two causal convolutional layers with the same dilation rate, each followed by weight normalization and Leaky ReLU activation.
 A residual connection is applied between the input and the output of each block, where the input is transformed by an additional convolutional layer with a kernel size of 1 when its length does not match the one of the output.
 
-The encoder parameters are learned in an unsupervised manner by minimizing the triplet loss.
-The training procedure makes the extracted features of a given sequence (anchor) 
-as close as possible to the extracted features of this same sequence's subsequences (positive samples) 
-and as distant as possible from the extracted features of other subsequences (negative samples).
-
-The number of features extracted by the encoder is determined by the number of hidden units of the linear output layer.
-These features are used together with the class labels for training the support vector classifier. 
-
 <img src=https://fg-research-assets.s3.eu-west-1.amazonaws.com/cnn-encoder-diagram.png style="width:80%;margin-top:30px;margin-bottom:20px"/>
 
 *Encoder architecture (source: [doi.org/10.48550/arXiv.1901.10738](https://doi.org/10.48550/arXiv.1901.10738))*
+
+The encoder parameters are learned in an unsupervised manner by minimizing the triplet loss.
+The training procedure makes the extracted features of a given sequence (reference) 
+as close as possible to the extracted features of this same sequence's subsequences (positive samples) 
+and as distant as possible from the extracted features of other sequences (negative samples).
+All (sub)sequences are sampled randomly during each training iteration.
+
+<img src=https://fg-research-assets.s3.eu-west-1.amazonaws.com/cnn-encoder-sampling-diagram.png style="width:40%;margin-top:30px;margin-bottom:20px"/>
+
+*Time-based sampling procedure (source: [doi.org/10.48550/arXiv.1901.10738](https://doi.org/10.48550/arXiv.1901.10738))*
+
+The number of features extracted by the encoder is determined by the number of hidden units of the linear output layer.
+These features are used together with the class labels for training the support vector classifier. 
 
 **Model Resources:** [[Paper]](https://doi.org/10.48550/arXiv.1901.10738) [[Code]](https://github.com/White-Link/UnsupervisedScalableRepresentationLearningTimeSeries)
 
