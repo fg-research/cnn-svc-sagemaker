@@ -19,14 +19,14 @@ A residual connection is applied between the input and the output of each block,
 *Encoder architecture (source: [doi.org/10.48550/arXiv.1901.10738](https://doi.org/10.48550/arXiv.1901.10738))*
 
 The encoder parameters are learned in an unsupervised manner by minimizing the triplet loss.
-The training procedure makes the extracted features of a given sequence (reference) 
+The contrastive training procedure makes the extracted features of a given sequence (anchor or reference) 
 as close as possible to the extracted features of this same sequence's subsequences (positive samples) 
 and as distant as possible from the extracted features of other sequences (negative samples).
 All (sub)sequences are sampled randomly during each training iteration.
 
 <img src=https://fg-research-assets.s3.eu-west-1.amazonaws.com/cnn-encoder-sampling-diagram.png style="width:40%;margin-top:30px;margin-bottom:20px"/>
 
-*Time-based sampling (source: [doi.org/10.48550/arXiv.1901.10738](https://doi.org/10.48550/arXiv.1901.10738))*
+*Contrastive training (source: [doi.org/10.48550/arXiv.1901.10738](https://doi.org/10.48550/arXiv.1901.10738))*
 
 The number of features extracted by the encoder is determined by the number of hidden units of the linear output layer.
 These features are used together with the class labels for training the support vector classifier. 
