@@ -54,17 +54,17 @@ See `notebook.ipynb` for an example of how to launch a training job.
 
 #### Hyperparameters
 The training algorithm takes as input the following hyperparameters:
-- `penalty`: `float`. The regularization parameter of the support vector classifier	(default = 0).
-- `kernel`: `str`. The kernel function of the support vector classifier	(default = "rbf").
-- `blocks`: `int`. The number of blocks of convolutional layers	(default = 10).
-- `filters`: `int`.	The number of filters of all but the last convolutional layers (default = 40).
-- `kernel-size`: `int`.	The size of the kernel of all non-residual convolutional layers (default = 3).	
-- `reduced-size`: `int`. The number of filters of the last convolutional layer (default = 160).	
-- `output-size`: `int`.	The number of hidden units of the linear output layer (default = 320).
-- `negative-samples`: `int`. The number of negative samples used for calculating the triplet loss (default = 10).
-- `lr`: `float`. The learning rate used for training (default = 0.001).
-- `batch-size`: `int`. The batch size used for training (default = 10).
-- `epochs`: `int`. The number of training epochs (default = 100).
+- `penalty`: `float`. The regularization parameter of the support vector classifier.
+- `kernel`: `str`. The kernel function of the support vector classifier.
+- `blocks`: `int`. The number of blocks of convolutional layers.
+- `filters`: `int`.	The number of filters of all but the last convolutional layers.
+- `kernel-size`: `int`.	The size of the kernel of all non-residual convolutional layers.	
+- `reduced-size`: `int`. The number of filters of the last convolutional layer.	
+- `output-size`: `int`.	The number of hidden units of the linear output layer.
+- `negative-samples`: `int`. The number of negative samples used for calculating the triplet loss.
+- `lr`: `float`. The learning rate used for training.
+- `batch-size`: `int`. The batch size used for training.
+- `epochs`: `int`. The number of training epochs.
 
 #### Metrics
 The training algorithm logs the following metrics:
