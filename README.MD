@@ -97,5 +97,7 @@ The algorithm supports only real-time inference endpoints. The inference image i
 See `notebook.ipynb` for an example of how to deploy the model to an endpoint, invoke the endpoint and process the response.
 See the sample output file `real_time_predictions.csv` in the `data/inference/output/real-time` folder.
 
+**Additional Resources:** [[Sample Notebook]](https://github.com/fg-research/cnn-svc-sagemaker/blob/master/notebook.ipynb) 
+
 ## References
 - J. Y. Franceschi, A. Dieuleveut and M. Jaggi, "Unsupervised scalable representation learning for multivariate time series," in *Advances in neural information processing systems*, vol. 32, 2019, [doi.org/10.48550/arXiv.1901.10738](https://doi.org/10.48550/arXiv.1901.10738).
